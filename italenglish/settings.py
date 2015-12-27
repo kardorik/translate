@@ -60,9 +60,9 @@ WSGI_APPLICATION = 'italenglish.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'italenglish_3',
-        'USER': 'root',
-        'PASSWORD': 'welcome',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
     }
 }
 
