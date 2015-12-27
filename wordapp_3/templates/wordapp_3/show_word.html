@@ -1,0 +1,30 @@
+{% extends 'wordapp_3/base_desktop.html' %}
+
+{% load staticfiles %}
+
+{% block main_body %}
+
+{% if alien_word %}
+<p>This is what {{ alien_word.label }} means:</p>
+<p>{{ alien_word.definition }}</p>
+<hr>
+<p>And this is why you know it already:</p>
+{% for translation in translation_list %}
+
+    <p>{{ translation.alien_word.label }} : {{ translation.native_word.label }}</p>
+    <p>{{ translation.alien_description }}</p>
+    <p>author: {{ translation.author }}</p>
+    <img src="{{ translation.author.profile.pic_url }}">
+    <img src="{{ translation.pic_url }}">
+    <hr>
+
+{% endfor %}
+
+
+
+
+{% else %}
+<p>Looks like this word does not exist yet. Add it?</p>
+{% endif %}
+
+{% endblock %}
