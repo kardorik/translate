@@ -1,0 +1,19 @@
+{% extends 'wordapp_3/base_desktop.html' %}
+
+{% load staticfiles %}
+
+{% block main_body %}
+
+<hr>
+{% for translation in translation_list %}
+
+    <p>{{ translation.alien_word.label }} : {{ translation.native_word.label }}</p>
+    <p>{{ translation.alien_description }}</p>
+    <p>author: {{ translation.author }}</p>
+    <img src="{{ translation.author.profile.pic_url }}">
+    <img src="{{ translation.pic_url }}">
+    <hr>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'wordapp_3/style.css' %}" />
+<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+{% include "wordapp_3/top_bar_desktop.html" %}
+
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+{% csrf_token %}
+<ul id='login_table'>
+<li class='login_field'>{{ form.username.label_tag }}</li>
+<li class='login_field'>{{ form.username }}</li>
+<li class='login_field'>{{ form.password.label_tag }}</li>
+<li class='login_field'>{{ form.password }}</li>
+<li class='login_field'><input type="submit" value="login" /></li>
+</ul>
+
+<input type="hidden" name="next" value="profile" />
+</form>
