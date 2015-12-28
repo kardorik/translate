@@ -10,6 +10,7 @@ class Word(models.Model):
 class Translation(models.Model):
     alien_word = models.ForeignKey(Word, default=1, related_name='alien_word')
     native_word = models.ForeignKey(Word, default=1, related_name='native_word')
+    native_translation_word = models.ForeignKey(Word, default=1, related_name='native_translation_word')
     alien_description = models.TextField(default='')
     native_description = models.TextField(default='')
     likes = models.IntegerField(default=0)

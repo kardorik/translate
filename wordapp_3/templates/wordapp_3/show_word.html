@@ -11,7 +11,8 @@
 <p>And this is why you know it already:</p>
 {% for translation in translation_list %}
 
-    <p>{{ translation.alien_word.label }} : {{ translation.native_word.label }}</p>
+    <p>{{ translation.alien_word.label }} : <I>{{ translation.native_word.label }}</I> : {{ translation.native_translation_word.label }}</p>
+    <p>{{ translation.native_description }}</p>
     <p>{{ translation.alien_description }}</p>
     <p>author: {{ translation.author }}</p>
     <img src="{{ translation.author.profile.pic_url }}">
