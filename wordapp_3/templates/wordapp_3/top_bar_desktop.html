@@ -1,15 +1,28 @@
-<div id='top_bar' style="text-align: center">
-    <a href="/" style="text-decoration: none"><span class='logo logo_desktop'><h1>ITALENGLISH</h1></span</a>
-    <div style="padding-bottom: 15px">
-        <a href="/translate/show_list" style="text-decoration: none"><span class='top_bar_menu_item top_bar_menu_item_desktop'>list</span></a>
-        &middot;
-        <a href="/profile" style="text-decoration: none"><span class='top_bar_menu_item top_bar_menu_item_desktop'>account</span></a>
-        &middot;
-        <a href="/logout" style="text-decoration: none"><span class='top_bar_menu_item top_bar_menu_item_desktop'>logout</span></a>
-    </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ITALENGLISH</a>
+        </div>
 
-    <form method="get" action="/translate/show_word/">
-        <input type="text" id="search_box" name="q" placeholder="Cosa vuol dire ...">
-        <input type="submit" value="Search" >
-    </form>
-</div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="/translate/show_list">List</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+
+            <form class="navbar-form" role="search" method="get" action="/translate/show_word/">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search_box" name="q" placeholder="Cosa vuol dire...">
+                </div>
+                <button type="submit" class="btn btn-default" value="Search">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>

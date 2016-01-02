@@ -1,0 +1,67 @@
+li a {
+  color: green;
+}
+
+body {
+  font-family: 'Josefin Sans' !important;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/SF-Street.jpg');
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.splash-title {
+    position: absolute;
+    top: 10%;
+    right: 50px;
+    left: 50px;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+.splash-title .btn {
+    font-size: 2.5vw;
+}
+
+.title {
+    font-size: 350%;
+    font-weight: bold;
+}
+
+.footer {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.body-content {
+    padding-top: 50px;
+}
+
+.word {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.alien-word {}
+
+.native-word {
+    font-style: italic;
+}
+
+.native-translation {}
+
+.native-description {
+    text-align: justify;
+}
+
+.alien-description {
+    text-align: justify;
+}
+
+.author {
+    font-style: italic;
+}

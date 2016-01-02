@@ -7,10 +7,10 @@
 <hr>
 {% for translation in translation_list %}
 
-    <p>{{ translation.alien_word.label }} : <I>{{ translation.native_word.label }}</I> : {{ translation.native_translation_word.label }}</p>
-    <p>{{ translation.native_description }}</p>
-    <p>{{ translation.alien_description }}</p>
-    <p>author: {{ translation.author }}</p>
+    <p class="word"><span class="alien-word">{{ translation.alien_word.label }}</span> : <span class="native-word">{{ translation.native_word.label }}</span> : <span class="native-translation">{{ translation.native_translation_word.label }}</span></p>
+    <p class="native-description">{{ translation.native_description }}</p>
+    <p class="alien-description">{{ translation.alien_description }}</p>
+    <p class="author">author: {{ translation.author }}</p>
     <img src="{{ translation.author.profile.pic_url }}">
     <img src="{{ translation.pic_url }}">
     <hr>
