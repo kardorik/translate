@@ -13,10 +13,11 @@
 
     <p>{{ translation.alien_word.label }} : <I>{{ translation.native_word.label }}</I> : {{ translation.native_translation_word.label }}</p>
     <p>{{ translation.native_description }}</p>
-    <p>{{ translation.alien_description }}</p>
-    <p>author: {{ translation.author }}</p>
-    <img src="{{ translation.author.profile.pic_url }}">
-    <img src="{{ translation.pic_url }}">
+    <p>{{ translation.alien_description }}
+    author: {{ translation.author }}
+    <img class="author-pic" src="{{ translation.author.profile.pic_url }}">
+    </p>
+    <img class="translation-pic" src="{{ translation.pic_url }}">
     <hr>
 
 {% endfor %}

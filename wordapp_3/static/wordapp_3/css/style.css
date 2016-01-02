@@ -65,3 +65,11 @@ body {
 .author {
     font-style: italic;
 }
+
+.author-pic {
+    width: 50px;
+}
+
+.translation-pic {
+    width: 100%;
+}
