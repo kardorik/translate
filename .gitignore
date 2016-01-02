@@ -1,0 +1,7 @@
+# PyCharm workspace files
+.idea/*
+
+# Project .pyc files
+italenglish/*.pyc
+wordapp_3/*.pyc
+wordapp_3/migrations/

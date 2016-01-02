@@ -1,8 +1,7 @@
-{% load staticfiles %}
+{% extends 'wordapp_3/base_desktop.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'wordapp_3/style.css' %}" />
-<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-
-{% include "wordapp_3/top_bar_desktop.html" %}
+{% block main_body %}
 
 <p id='logout_message'>You are now logged out</p>
+
+{% endblock %}

@@ -1,24 +1,26 @@
-{% load staticfiles %}
+{% extends 'wordapp_3/base_desktop.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'wordapp_3/style.css' %}" />
-<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-
-{% include "wordapp_3/top_bar_desktop.html" %}
-
+{% block main_body %}
 
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
+<br/>
 {% endif %}
 
-<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+<form method="post" action="{% url 'django.contrib.auth.views.login' %}" class="form-signin">
 {% csrf_token %}
-<ul id='login_table'>
-<li class='login_field'>{{ form.username.label_tag }}</li>
-<li class='login_field'>{{ form.username }}</li>
-<li class='login_field'>{{ form.password.label_tag }}</li>
-<li class='login_field'>{{ form.password }}</li>
-<li class='login_field'><input type="submit" value="login" /></li>
-</ul>
+
+<div class="login-content">
+    <label for="username" class="sr-only">Email address</label>
+    <input id="username" class="form-control" placeholder="Username" required autofocus>
+    <br/>
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" id="password" class="form-control" placeholder="Password" required>
+    <br/>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Login</button>
+</div>
 
 <input type="hidden" name="next" value="profile" />
 </form>
+
+{% endblock %}
